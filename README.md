@@ -12,4 +12,4 @@ You can run 'python parser.py' in a directory with a test.tr0 file and it will r
 
 **Returns:**
 - variables: a list of variable names. These have been snake-cased: {'v(a' or 'v(a)' ==>  'v_a'}
-- data: a 2d numpy array with shape (vars, num_points)
+- data: a 2d numpy array with shape (num_variables, num_points)
