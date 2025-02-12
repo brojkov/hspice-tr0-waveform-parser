@@ -1,15 +1,15 @@
 # HSpice Waveform .tr0 parser
 
-Fast. Rips through large .tr0 files at over 900MB/s singlethreaded (AMD EPYC 9554).
+Fast. Rips through large .tr0 files at over 900MB/s singlethreaded (AMD EPYC 9554).\
 I wrote this as a component of a larger framework which generates and runs spice simulations.
 
-Does not support sweeps, though it should not be difficult to add.
-Only supports binary format files. Valid output options:
-.OPTION POST=1 POST_VERSION=2001 (Use when you have >9999 output variables. fp64 format)
+Does not support sweeps, though it should not be difficult to add.\
+Only supports binary format files. Valid output options:\
+.OPTION POST=1 POST_VERSION=2001 (Use when you have >9999 output variables. fp64 format)\
 .OPTION POST=1 POST_VERSION=9601 (Untested as of yet but should work. fp32 format)
 
 ## Usage
-See the main block for an example.
+See the main block for an example.\
 You can run 'python parser.py' in a directory with a test.tr0 file and it will report the time to parse, and give you a plot of the first variable if you have matplotlib.
 
 **Returns:**
