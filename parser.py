@@ -119,7 +119,7 @@ class TR0Parser:
     self.block_data_start_idx = [0]
     for i, block_size in enumerate(self.block_sizes[:-1]):
       block_num_values = block_size // self.bytes_per_value
-      if block_num_values % self.bytes_per_value != 0:
+      if block_size % self.bytes_per_value != 0:
         raise ValueError(f'Error: Block size {block_size} is not divisible by bytes per value {self.bytes_per_value}')
       self.block_data_start_idx.append(self.block_data_start_idx[-1] + block_num_values)
 
